@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Delivery App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Drone Delivery App</h1>
+            <form id="orderForm">
+                <input type="text" id="pickup" placeholder="Pickup Location (lat,lng)" required>
+                <input type="text" id="dropoff" placeholder="Dropoff Location (lat,lng)" required>
+                <button type="submit">Place Order</button>
+            </form>
+        </header>
+
+        <!-- Map Section -->
+        <div id="map"></div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="battery-level">
+                <label>Drone Battery Level: <span id="batteryLevel">100%</span></label>
+            </div>
+            <div class="next-order">
+                <label>Next Order Queue: <span id="nextOrder">Order #1</span></label>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
